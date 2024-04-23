@@ -433,7 +433,7 @@ String buildLocationString(){
   if (gps.date.day() < 10) dataString += "0";
   dataString += String(gps.date.day());
   dataString += " ";
-  if (gps.time.hour() < 10) dataString += "0";
+  if ((gps.time.hour() + hourOffset) < 10) dataString += "0";
   dataString += String(gps.time.hour() + hourOffset);
   dataString += ":";
   if (gps.time.minute() < 10) dataString += "0";
